@@ -1,1 +1,2 @@
 Chapter 1: Managing Database and Collection - "Show, Create and Delete"
+Chapter 2: Insert Operations in MongoDB
