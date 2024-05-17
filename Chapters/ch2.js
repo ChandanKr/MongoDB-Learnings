@@ -18,7 +18,7 @@
 // });
 
 //* Example:
-// db.studentData>.insertOne({
+// db.studentData.insertOne({
 //     'name': 'Chandan',
 //     age: 26,
 // });
