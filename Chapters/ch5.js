@@ -31,3 +31,19 @@
 
 // Q3: Find out the document where the user in comments is "Henry" and also the metadata likes value > 50
 // Sol: db.comments.find({'comments.user': "Henry", 'metadata.likes' : {$gt: 50}});
+
+// Q4: Return a comment array which must have this user = (alice and henry) elements only in it.
+//? We must use $all operator. 
+// Sol: db.comments.find({'comments.user': "Henry", 'metadata.likes' : {$gt: 50}});
+
+
+
+//! $all vs $elemMatch
+
+//* The $all operator selects the documents where the value of a field is an array that contains all the specified elements.
+// Syntax: {<field>: {$all: [<value1>, <value2>, ...]}}
+// Example: db.comments.find({'comments.user': {$all: ['Alice', 'Henry']}});
+
+//* The $elemMatch operator matches documents that contain an array field with at least one element that matches all the specified query criteria.
+// Syntax: {<field>: {$elemMatch: {<query1>, <query2>, ...}}}
+// Example: db.comments.find({'comments': {$elemMatch: {"user": "Alice", "text": "This is Awesome!"}}});
